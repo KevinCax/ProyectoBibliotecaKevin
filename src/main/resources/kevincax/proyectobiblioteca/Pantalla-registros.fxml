@@ -75,7 +75,37 @@
                 </Tab>
                 <Tab text="Registros">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="702.0" prefWidth="1006.0">
+                                 <top>
+                                    <TextField alignment="CENTER" prefHeight="38.0" prefWidth="830.0" text="Ingresar ISBN" BorderPane.alignment="CENTER">
+                                       <BorderPane.margin>
+                                          <Insets left="300.0" right="300.0" top="20.0" />
+                                       </BorderPane.margin>
+                                    </TextField>
+                                 </top>
+                                 <center>
+                                    <ListView prefHeight="596.0" prefWidth="1006.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <bottom>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" text="Renovar">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" text="Enviar">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </bottom>
+                              </BorderPane>
+                           </children></AnchorPane>
                   </content>
                 </Tab>
               </tabs>
