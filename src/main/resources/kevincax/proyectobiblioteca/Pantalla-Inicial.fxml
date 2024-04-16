@@ -42,7 +42,7 @@
       </AnchorPane>
       <AnchorPane layoutX="350.0" prefHeight="552.0" prefWidth="350.0">
          <children>
-            <TextField fx:id="IDemail" layoutX="60.0" layoutY="261.0" prefHeight="31.0" prefWidth="230.0" promptText="Contraseña" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="261.0">
+            <TextField fx:id="textFieldEmail" layoutX="60.0" layoutY="199.0" prefHeight="31.0" prefWidth="230.0" promptText="Correo electrónico" AnchorPane.bottomAnchor="322.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="199.0">
                <contextMenu>
                   <ContextMenu>
                     <items>
@@ -51,7 +51,7 @@
                   </ContextMenu>
                </contextMenu>
             </TextField>
-            <PasswordField layoutX="60.0" layoutY="199.0" prefHeight="31.0" prefWidth="215.0" promptText="Correo electrónico" AnchorPane.bottomAnchor="321.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="199.0" />
+            <PasswordField fx:id="textFieldPassword" layoutX="60.0" layoutY="244.0" prefHeight="31.0" prefWidth="215.0" promptText="Contraseña" AnchorPane.bottomAnchor="276.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="244.0" />
              <Button fx:id="IdIniciarSesion" layoutX="122.0" layoutY="322.0" onAction="#onIniciarSesion" text="Iniciar sesión" />
             <Button fx:id="IdCrearUsuario" layoutX="123.0" layoutY="386.0" onAction="#onCrearUsuario" text="Crear cuenta" />
             <Hyperlink layoutX="85.0" layoutY="477.0" text="¿Olvidaste tu contraseña?" underline="true" />

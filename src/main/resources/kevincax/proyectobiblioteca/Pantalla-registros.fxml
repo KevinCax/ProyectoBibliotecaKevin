@@ -10,7 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="739.0" prefWidth="1202.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kevincax.proyectobiblioteca.PantallaRegistros">
+<AnchorPane prefHeight="664.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kevincax.proyectobiblioteca.PantallaRegistros">
    <children>
       <BorderPane prefHeight="739.0" prefWidth="1202.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
@@ -22,7 +22,7 @@
                            <children>
                               <HBox prefHeight="278.0" prefWidth="1006.0">
                                  <children>
-                                    <TextField prefHeight="31.0" prefWidth="238.0" promptText="Ingrese el ISBN del libro">
+                                    <TextField prefHeight="31.0" prefWidth="254.0" promptText="Ingrese el ISBN del libro">
                                        <HBox.margin>
                                           <Insets bottom="100.0" left="20.0" right="20.0" top="100.0" />
                                        </HBox.margin>
@@ -44,7 +44,7 @@
                               </HBox>
                               <HBox layoutX="-1.0" layoutY="278.0" prefHeight="278.0" prefWidth="1006.0">
                                  <children>
-                                    <TextField prefHeight="31.0" prefWidth="238.0" promptText="Ingrese el ISBN del libro">
+                                    <TextField prefHeight="31.0" prefWidth="303.0" promptText="Ingrese el ISBN del libro">
                                        <HBox.margin>
                                           <Insets bottom="100.0" left="20.0" right="20.0" top="100.0" />
                                        </HBox.margin>
@@ -64,9 +64,9 @@
                                     </VBox>
                                  </children>
                               </HBox>
-                              <HBox alignment="CENTER" layoutY="556.0" prefHeight="146.0" prefWidth="1005.0">
+                              <HBox alignment="CENTER" layoutY="556.0" prefHeight="69.0" prefWidth="904.0">
                                  <children>
-                                    <Button alignment="CENTER" mnemonicParsing="false" prefHeight="71.0" prefWidth="211.0" text="Asunto" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" prefHeight="51.0" prefWidth="175.0" text="Asunto" />
                                  </children>
                               </HBox>
                            </children>
@@ -77,19 +77,19 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <BorderPane prefHeight="702.0" prefWidth="1006.0">
+                              <BorderPane prefHeight="628.0" prefWidth="904.0">
                                  <top>
-                                    <TextField alignment="CENTER" prefHeight="38.0" prefWidth="830.0" text="Ingresar ISBN" BorderPane.alignment="CENTER">
+                                    <TextField alignment="CENTER" prefHeight="38.0" prefWidth="830.0" promptText="Ingresar ISBN" BorderPane.alignment="CENTER">
                                        <BorderPane.margin>
                                           <Insets left="300.0" right="300.0" top="20.0" />
                                        </BorderPane.margin>
                                     </TextField>
                                  </top>
                                  <center>
-                                    <ListView prefHeight="596.0" prefWidth="1006.0" BorderPane.alignment="CENTER" />
+                                    <ListView prefHeight="378.0" prefWidth="1006.0" BorderPane.alignment="CENTER" />
                                  </center>
                                  <bottom>
-                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                    <HBox alignment="CENTER" prefHeight="97.0" prefWidth="904.0" BorderPane.alignment="CENTER">
                                        <children>
                                           <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" text="Renovar">
                                              <HBox.margin>
@@ -114,7 +114,7 @@
          <right>
             <VBox prefHeight="739.0" prefWidth="198.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Agregar Miembro">
+                  <Button fx:id="buttonAddMember" contentDisplay="TOP" mnemonicParsing="false" onAction="#buttonAddMember" prefHeight="200.0" prefWidth="200.0" text="Agregar Miembro">
                      <graphic>
                         <ImageView fitHeight="87.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -125,8 +125,11 @@
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
                   </Button>
-                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Agregar Libro">
+                  <Button fx:id="buttonAddBook" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonAddBook" prefHeight="200.0" prefWidth="200.0" text="Agregar Libro">
                      <graphic>
                         <ImageView fitHeight="58.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -134,8 +137,11 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
                   </Button>
-                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Visulizar Miembros">
+                  <Button fx:id="ButtonVisuMembers" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#ButtonVisuMembers" prefHeight="200.0" prefWidth="200.0" text="Visulizar Miembros">
                      <graphic>
                         <ImageView fitHeight="63.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -143,8 +149,11 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
                   </Button>
-                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="134.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Visualizar Libros">
+                  <Button fx:id="buttonVisuBooks" contentDisplay="TOP" layoutX="10.0" layoutY="134.0" mnemonicParsing="false" onAction="#buttonVisuBooks" prefHeight="200.0" prefWidth="200.0" text="Visualizar Libros">
                      <graphic>
                         <ImageView fitHeight="51.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -152,8 +161,11 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
                   </Button>
-                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="382.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Ajustes">
+                  <Button fx:id="buttonSettings" contentDisplay="TOP" layoutX="10.0" layoutY="382.0" mnemonicParsing="false" onAction="#buttonSettings" prefHeight="200.0" prefWidth="200.0" text="Ajustes">
                      <graphic>
                         <ImageView fitHeight="65.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -161,6 +173,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
                   </Button>
                </children>
             </VBox>
