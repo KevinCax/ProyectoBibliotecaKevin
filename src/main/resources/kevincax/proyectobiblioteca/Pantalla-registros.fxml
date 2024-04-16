@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="739.0" prefWidth="1202.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kevincax.proyectobiblioteca.PantallaRegistros">
+   <children>
+      <BorderPane prefHeight="739.0" prefWidth="1202.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Administrador">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox prefHeight="278.0" prefWidth="1006.0">
+                                 <children>
+                                    <TextField prefHeight="31.0" prefWidth="238.0" promptText="Ingrese el ISBN del libro">
+                                       <HBox.margin>
+                                          <Insets bottom="100.0" left="20.0" right="20.0" top="100.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <VBox alignment="CENTER" prefHeight="179.0" prefWidth="708.0">
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Text nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del Libro" textAlignment="CENTER" wrappingWidth="708.6708984375" />
+                                          <Text layoutX="10.0" layoutY="129.0" lineSpacing="10.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor" textAlignment="CENTER" wrappingWidth="708.6708984375">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="-1.0" layoutY="278.0" prefHeight="278.0" prefWidth="1006.0">
+                                 <children>
+                                    <TextField prefHeight="31.0" prefWidth="238.0" promptText="Ingrese el ISBN del libro">
+                                       <HBox.margin>
+                                          <Insets bottom="100.0" left="20.0" right="20.0" top="100.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <VBox alignment="CENTER" prefHeight="179.0" prefWidth="708.0">
+                                       <children>
+                                          <Text nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del Libro" textAlignment="CENTER" wrappingWidth="708.6708984375" />
+                                          <Text layoutX="10.0" layoutY="129.0" lineSpacing="10.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor" textAlignment="CENTER" wrappingWidth="708.6708984375">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutY="556.0" prefHeight="146.0" prefWidth="1005.0">
+                                 <children>
+                                    <Button alignment="CENTER" mnemonicParsing="false" prefHeight="71.0" prefWidth="211.0" text="Asunto" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Registros">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <right>
+            <VBox prefHeight="739.0" prefWidth="198.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button contentDisplay="TOP" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Agregar Miembro">
+                     <graphic>
+                        <ImageView fitHeight="87.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Desktop/PNGS%20Para%20Proyecto/add%20user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Agregar Libro">
+                     <graphic>
+                        <ImageView fitHeight="58.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Desktop/PNGS%20Para%20Proyecto/add%20book.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Visulizar Miembros">
+                     <graphic>
+                        <ImageView fitHeight="63.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Desktop/PNGS%20Para%20Proyecto/list%20members.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="134.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Visualizar Libros">
+                     <graphic>
+                        <ImageView fitHeight="51.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Desktop/PNGS%20Para%20Proyecto/List%20book.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="382.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Ajustes">
+                     <graphic>
+                        <ImageView fitHeight="65.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Desktop/PNGS%20Para%20Proyecto/Ajustes.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
