@@ -34,7 +34,8 @@ public class LoginInicio implements StageInterface {
 
     @FXML
     private void onCrearUsuario() {
-
+        HelloApplication LI = new HelloApplication();
+        LI.muestraVentana(stage, "Agregar-usuarios.fxml");
     }
 
 

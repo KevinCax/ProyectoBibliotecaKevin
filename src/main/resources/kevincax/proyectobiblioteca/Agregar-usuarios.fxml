@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="509.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kevincax.proyectobiblioteca.AgregarUsuarios">
+   <children>
+      <HBox alignment="CENTER" prefHeight="61.0" prefWidth="732.0" style="-fx-background-color: #0598FF;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrarse">
+               <font>
+                  <Font name="Arial Narrow" size="44.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <TextField fx:id="textFieldNombre" layoutX="93.0" layoutY="111.0" prefHeight="31.0" prefWidth="218.0" />
+      <TextField fx:id="textFieldCui" layoutX="93.0" layoutY="186.0" prefHeight="31.0" prefWidth="218.0" />
+      <TextField fx:id="textFieldTelefono" layoutX="414.0" layoutY="111.0" prefHeight="31.0" prefWidth="218.0" />
+      <TextField fx:id="textFieldDireccion" layoutX="414.0" layoutY="188.0" prefHeight="31.0" prefWidth="218.0" />
+      <Text layoutX="93.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre y apellido" />
+      <Text layoutX="93.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código único de identidad" />
+      <Text layoutX="414.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono" />
+      <Text layoutX="414.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dirección de residencia" />
+      <Text layoutX="418.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" />
+      <Text layoutX="97.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo electrónico" />
+      <TextField fx:id="textFieldCorreo" layoutX="97.0" layoutY="265.0" prefHeight="31.0" prefWidth="218.0" />
+      <PasswordField fx:id="textFieldContrasena" layoutX="414.0" layoutY="265.0" prefHeight="31.0" prefWidth="218.0" />
+      <Button fx:id="cancelUser" layoutX="424.0" layoutY="376.0" mnemonicParsing="false" onAction="#cancelUser" prefHeight="50.0" prefWidth="137.0" style="-fx-background-color: #0598FF;" text="Cancelar" textFill="WHITE">
+         <font>
+            <Font name="Arial Narrow" size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="guardarUser" layoutX="151.0" layoutY="376.0" mnemonicParsing="false" onAction="#guardarUser" prefHeight="50.0" prefWidth="137.0" style="-fx-background-color: #0598FF;" text="Guardar" textFill="WHITE">
+         <font>
+            <Font name="Arial Narrow" size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

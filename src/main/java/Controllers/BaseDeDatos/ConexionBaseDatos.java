@@ -1,20 +1,34 @@
 package Controllers.BaseDeDatos;
 
-import javafx.scene.control.Button;
+import javafx.scene.control.Alert;
 
-import javax.swing.*;
 import java.sql.*;
 
 public class ConexionBaseDatos {
 
-    public static Connection BaseDatos () {
-        Connection connection = null;
+
+     public static Connection BaseDatos () {
+      Connection connection = null;
         try{
             connection = DriverManager.getConnection("jdbc:postgresql://roundhouse.proxy.rlwy.net:18270/railway","postgres","bjlnClYuLvdPiDvAOntVRdQHzoPKcxFv");
-            return connection;
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+
+          } catch (SQLException e) {
+          showAlert("Mensaje", "No se conecto a la base de datos, error:"+e.toString());
+      }
+         return connection;
     }
+
+      private static void showAlert(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+
+    }
+
+
+
+
 
 }
