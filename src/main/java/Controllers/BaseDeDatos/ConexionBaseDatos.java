@@ -27,8 +27,24 @@ public class ConexionBaseDatos {
 
     }
 
-
-
-
-
+    public static ResultSet ConsultaSQL(String query){
+        ResultSet rs;
+        try {
+            Connection connection = ConexionBaseDatos.BaseDatos();
+            Statement stmt = connection.createStatement();
+            rs = stmt.executeQuery(query);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return rs;
+    }
+    public static void ejecutarInsercion(String query) {
+        try {
+            Connection connection = ConexionBaseDatos.BaseDatos();
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(query);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al ejecutar la consulta de inserción: " + e.getMessage(), e);
+        }
+    }
 }

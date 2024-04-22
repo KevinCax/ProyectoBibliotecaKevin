@@ -46,8 +46,7 @@ public class AgregarUsuarios implements Initializable, StageInterface {
         String correo_electronico = textFieldCorreo.getText();
         String contrasena = textFieldContrasena.getText();
 
-        String agregarUsuarios = "INSERT INTO users (nombre, direccion,telefono,cui,correo_electronico,contrasena) VALUES ('" + nombre + "','" + direccion + "','" + telefono + "', '"+ cui + "', '"+ correo_electronico + "', '"+ contrasena + "')";
-
+        String agregarUsuarios = "INSERT INTO users (nombre, direccion,telefono,cui,correo_electronico,contrasena) VALUES ('" + nombre + "','" + direccion + "','" + telefono + "', '" + cui + "', '" + correo_electronico + "', '" + contrasena + "')";
 
             try {
                 Statement statement;

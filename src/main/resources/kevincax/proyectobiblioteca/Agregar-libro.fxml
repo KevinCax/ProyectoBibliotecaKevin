@@ -13,58 +13,67 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane prefHeight="470.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kevincax.proyectobiblioteca.addLibro">
+<Pane prefHeight="615.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kevincax.proyectobiblioteca.addLibro">
    <children>
-      <VBox prefHeight="365.0" prefWidth="686.0">
+      <VBox alignment="CENTER" prefHeight="80.0" prefWidth="819.0" style="-fx-background-color: #0598FF;">
          <children>
-            <TextField fx:id="title" promptText="Título del Libro">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Agregar Libro" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Narrow" size="50.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutY="80.0" prefHeight="414.0" prefWidth="819.0">
+         <children>
+            <TextField fx:id="textFieldTitulo" prefHeight="31.0" prefWidth="696.0" promptText="Título del Libro">
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                  <Insets bottom="10.0" left="100.0" right="100.0" top="20.0" />
                </VBox.margin>
             </TextField>
-            <TextField fx:id="isbn" layoutX="10.0" layoutY="10.0" promptText="ISBN">
+            <TextField fx:id="textFieldIsbn" layoutX="10.0" layoutY="10.0" promptText="ISBN">
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                  <Insets bottom="10.0" left="100.0" right="100.0" top="20.0" />
                </VBox.margin>
             </TextField>
-            <TextField fx:id="author" layoutX="10.0" layoutY="10.0" promptText="Autor del Libro">
+            <TextField fx:id="textFieldAutor" layoutX="10.0" layoutY="10.0" promptText="Autor del Libro">
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                  <Insets bottom="10.0" left="100.0" right="100.0" top="20.0" />
                </VBox.margin>
             </TextField>
-            <TextField fx:id="publisher" layoutX="10.0" layoutY="41.0" promptText="Año de Publicación">
+            <TextField fx:id="textFieldPublisher" layoutX="10.0" layoutY="41.0" promptText="Año de Publicación">
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                  <Insets bottom="10.0" left="100.0" right="100.0" top="20.0" />
                </VBox.margin>
             </TextField>
-            <TextField fx:id="editorial" layoutX="10.0" layoutY="41.0" promptText="Editorial del Libro">
+            <TextField fx:id="textFieldEditorial" layoutX="10.0" layoutY="41.0" promptText="Editorial del Libro">
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                  <Insets bottom="10.0" left="100.0" right="100.0" top="20.0" />
                </VBox.margin>
             </TextField>
-            <TextField fx:id="cantDis" layoutX="10.0" layoutY="41.0" promptText="Cantidad Disponible">
+            <TextField fx:id="textFieldCantDis" layoutX="10.0" layoutY="41.0" promptText="Cantidad Disponible">
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                  <Insets bottom="10.0" left="100.0" right="100.0" top="20.0" />
                </VBox.margin>
             </TextField>
          </children>
       </VBox>
-      <HBox layoutY="361.0" prefHeight="95.0" prefWidth="686.0">
+      <HBox alignment="CENTER" layoutY="494.0" prefHeight="121.0" prefWidth="819.0">
          <children>
-            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#addLibro" prefHeight="73.0" prefWidth="343.0" style="-fx-background-color: #0598FF;" text="Guardar" textFill="WHITE">
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#guardarLibro" prefHeight="55.0" prefWidth="230.0" style="-fx-background-color: #0598FF;" text="Guardar" textFill="WHITE">
                <HBox.margin>
-                  <Insets left="10.0" right="10.0" top="20.0" />
+                  <Insets bottom="10.0" left="10.0" right="30.0" top="20.0" />
                </HBox.margin>
                <font>
                   <Font name="Arial Black" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="cancelar" mnemonicParsing="false" onAction="#cancelar" prefHeight="85.0" prefWidth="312.0" style="-fx-background-color: #FF0000;" text="Cancelar" textFill="WHITE">
+            <Button fx:id="cancelar" mnemonicParsing="false" onAction="#cancelar" prefHeight="55.0" prefWidth="230.0" style="-fx-background-color: #FF0000;" text="Cancelar" textFill="WHITE">
                <font>
                   <Font name="Arial Black" size="20.0" />
                </font>
                <HBox.margin>
-                  <Insets left="10.0" right="10.0" top="20.0" />
+                  <Insets bottom="10.0" left="30.0" right="10.0" top="20.0" />
                </HBox.margin>
             </Button>
 

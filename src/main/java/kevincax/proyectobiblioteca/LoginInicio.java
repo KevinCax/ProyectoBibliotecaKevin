@@ -49,9 +49,6 @@ public class LoginInicio implements StageInterface {
             Statement statement = ConexionBaseDatos.BaseDatos().createStatement();
             ResultSet queryResult = statement.executeQuery(verifyLogin);
 
-
-
-
             while(queryResult.next()){
                 if(queryResult.getInt(1) == 1) {
                     HelloApplication LI = new HelloApplication();
