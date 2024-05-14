@@ -13,7 +13,7 @@ public class ConexionBaseDatos {
             connection = DriverManager.getConnection("jdbc:postgresql://roundhouse.proxy.rlwy.net:18270/railway","postgres","bjlnClYuLvdPiDvAOntVRdQHzoPKcxFv");
 
           } catch (SQLException e) {
-          showAlert("Mensaje", "No se conecto a la base de datos, error:"+e.toString());
+          showAlert("Alerta", "No se conecto a la base de datos, error:"+e.toString());
       }
          return connection;
     }
@@ -47,4 +47,5 @@ public class ConexionBaseDatos {
             throw new RuntimeException("Error al ejecutar la consulta de inserción: " + e.getMessage(), e);
         }
     }
+
 }

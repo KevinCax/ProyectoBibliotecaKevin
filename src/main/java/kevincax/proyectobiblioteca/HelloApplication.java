@@ -2,8 +2,10 @@ package kevincax.proyectobiblioteca;
 
 import Controllers.Controladores.StageInterface;
 import javafx.application.Application;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -38,4 +40,10 @@ public class HelloApplication extends Application {
          e.printStackTrace();
      }
     }
+
+    public static void llenarCombo(ComboBox<String> llenarCombo, ObservableList<String> infoCombo){
+        llenarCombo.setItems(infoCombo);
+    }
+
+
 }

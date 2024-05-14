@@ -29,7 +29,7 @@
       <Text layoutX="418.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" />
       <Text layoutX="97.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo electrónico" />
       <TextField fx:id="textFieldCorreo" layoutX="97.0" layoutY="265.0" prefHeight="31.0" prefWidth="218.0" />
-      <PasswordField fx:id="textFieldContrasena" layoutX="414.0" layoutY="265.0" prefHeight="31.0" prefWidth="218.0" />
+      <PasswordField fx:id="textFieldContrasenia" layoutX="414.0" layoutY="265.0" prefHeight="31.0" prefWidth="218.0" />
       <Button fx:id="cancelUser" layoutX="424.0" layoutY="376.0" mnemonicParsing="false" onAction="#cancelUser" prefHeight="50.0" prefWidth="137.0" style="-fx-background-color: #0598FF;" text="Cancelar" textFill="WHITE">
          <font>
             <Font name="Arial Narrow" size="22.0" />

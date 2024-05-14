@@ -1,23 +1,46 @@
 package kevincax.proyectobiblioteca;
 
-import Controllers.BaseDeDatos.ConexionBaseDatos;
-
-import java.io.Serializable;
-
-public class Autor implements Serializable {
-    private int id;
+public class Autor {
     private String nombre;
+    private String apellido;
+    private String cui;
 
-    public Autor() {
+    public Autor(String nombre, String apellido, String cui) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.cui = cui;
     }
 
-    public Autor(int id, String nombre) {
-        this.id = id;
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void CrearAutor(){
-        String query = "INSERT INTO autor (nombre) VALUES ('"+nombre+"')";
-        ConexionBaseDatos.ejecutarInsercion(query);
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getCui() {
+        return cui;
+    }
+
+    public void setCui(String cui) {
+        this.cui = cui;
+    }
+
+    @Override
+    public String toString() {
+        return "Autor{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", cui='" + cui + '\'' +
+                '}';
     }
 }

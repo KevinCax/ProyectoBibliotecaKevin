@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.sql.ResultSet;
@@ -17,15 +16,13 @@ public class LoginInicio implements StageInterface {
     public Button IdIniciarSesion;
     @FXML
     private Label welcomeText;
-    @FXML
-    private TextField textFieldEmail,  textFieldPassword;
-
 
     Stage stage;
     @Override
     public void setStage(Stage stage) {
         this.stage=stage;
     }
+
 
     @FXML
     public void initialize() {
@@ -38,12 +35,14 @@ public class LoginInicio implements StageInterface {
         LI.muestraVentana(stage, "Agregar-usuarios.fxml");
     }
 
+    @FXML
+    private TextField textFieldEmail,  textFieldPassword;
 
     public void onIniciarSesion() {
     String email = textFieldEmail.getText();
     String password = textFieldPassword.getText();
 
-        String verifyLogin = "SELECT count(1) FROM users WHERE correo_electronico = '"+ email +"' AND contrasena = '"+ password +"'";
+        String verifyLogin = "SELECT count(1) FROM users WHERE correo_electronico = '"+ email +"' AND contrasenia = '"+ password +"'";
 
         try{
             Statement statement = ConexionBaseDatos.BaseDatos().createStatement();

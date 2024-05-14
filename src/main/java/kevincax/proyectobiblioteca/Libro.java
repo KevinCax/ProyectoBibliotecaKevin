@@ -1,37 +1,82 @@
 package kevincax.proyectobiblioteca;
 
-import Controllers.BaseDeDatos.ConexionBaseDatos;
-
 import java.io.Serializable;
 import java.sql.Date;
 
 public class Libro implements Serializable {
-    private int idLibro;
     private String titulo;
-    private Date anio_publicacion;
     private String isbn;
+    private java.sql.Date anio_publicacion;
     private int cantidad_disponible;
-    private int idAutor;
-    private int idEditorial;
+    private int editorial;
+    private int autor;
 
     public Libro() {
-    }
-
-    public Libro(int idLibro, String titulo, Date anio_publicacion, String isbn, int cantidad_disponible, int idAutor, int idEditorial) {
-        this.idLibro = idLibro;
         this.titulo = titulo;
-        this.anio_publicacion = anio_publicacion;
         this.isbn = isbn;
+        this.anio_publicacion = anio_publicacion;
         this.cantidad_disponible = cantidad_disponible;
-        this.idAutor = idAutor;
-        this.idEditorial = idEditorial;
+        this.editorial = editorial;
+        this.autor = autor;
     }
 
-    public void CrearLibro() {
-        String query = "INSERT INTO libro (titulo, fecha_publicacion, isbn, cantidad_stock, fkidautor, fkideditorial) VALUES ('"
-                + titulo + "', '" + anio_publicacion + "', '" + isbn + "', " + cantidad_disponible + ", " + idAutor + ", " + idEditorial + ")";
+    public String getTitulo() {
+        return titulo;
+    }
 
-        ConexionBaseDatos.ejecutarInsercion(query);
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public Date getAnio_publicacion() {
+        return anio_publicacion;
+    }
+
+    public void setAnio_publicacion(Date anio_publicacion) {
+        this.anio_publicacion = anio_publicacion;
+    }
+
+    public int getCantidad_disponible() {
+        return cantidad_disponible;
+    }
+
+    public void setCantidad_disponible(int cantidad_disponible) {
+        this.cantidad_disponible = cantidad_disponible;
+    }
+
+    public int getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(int editorial) {
+        this.editorial = editorial;
+    }
+
+    public int getAutor() {
+        return autor;
+    }
+
+    public void setAutor(int autor) {
+        this.autor = autor;
+    }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "titulo='" + titulo + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", anio_publicacion=" + anio_publicacion +
+                ", cantidad_disponible=" + cantidad_disponible +
+                ", editorial=" + editorial +
+                ", autor=" + autor +
+                '}';
     }
 }

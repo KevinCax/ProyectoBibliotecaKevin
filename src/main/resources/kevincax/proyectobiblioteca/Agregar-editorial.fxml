@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kevincax.proyectobiblioteca.AgregarEditorial">
+   <children>
+      <VBox alignment="CENTER" prefHeight="86.0" prefWidth="600.0" style="-fx-background-color: #0598FF;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="AGREGAR EDITORIALES" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Italic" size="32.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <TextField fx:id="textNombreEditorial" layoutX="70.0" layoutY="137.0" promptText="Nombre de la Editorial" />
+      <TextField fx:id="textFieldDireccion" layoutX="339.0" layoutY="137.0" promptText="Dirección" />
+      <Button fx:id="guardarEditoriales" layoutX="95.0" layoutY="306.0" mnemonicParsing="false" onAction="#guardarEditoriales" prefHeight="52.0" prefWidth="137.0" style="-fx-background-color: #0598FF;" text="GUARDAR" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonCancelar" layoutX="326.0" layoutY="306.0" mnemonicParsing="false" onAction="#buttonCancelar" prefHeight="52.0" prefWidth="137.0" text="CANCELAR">
+         <font>
+            <Font name="Arial Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Text layoutX="70.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de la Editorial" />
+      <Text layoutX="339.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dirección" />
+      <Text layoutX="219.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ciudad" />
+      <ComboBox fx:id="cbCiudades" layoutX="217.0" layoutY="226.0" onShowing="#listarCiudades" prefHeight="31.0" prefWidth="166.0" />
+   </children>
+</AnchorPane>

@@ -34,9 +34,14 @@ public class PantallaRegistros implements StageInterface {
         LI.muestraVentana(stage, "Visual-members.fxml");
     }
 
-    public void buttonVisuBooks(ActionEvent actionEvent) {
+    public void abrirAutores(ActionEvent actionEvent) {
+        HelloApplication LI = new HelloApplication();
+        LI.muestraVentana(stage, "Agregar-autores.fxml");
     }
 
-    public void buttonSettings(ActionEvent actionEvent) {
+
+    public void agregarEditorial(ActionEvent actionEvent) {
+        HelloApplication LI = new HelloApplication();
+        LI.muestraVentana(stage, "Agregar-editorial.fxml");
     }
 }

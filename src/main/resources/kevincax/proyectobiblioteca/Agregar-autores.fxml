@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kevincax.proyectobiblioteca.AgregarAutores">
+   <children>
+      <VBox prefHeight="99.0" prefWidth="600.0" style="-fx-background-color: #0598FF;" AnchorPane.bottomAnchor="301.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="AGREGAR AUTORES" textAlignment="CENTER" wrappingWidth="599.24951171875">
+               <font>
+                  <Font name="Arial Bold Italic" size="42.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+      <TextField fx:id="textFieldNombre" layoutX="71.0" layoutY="151.0" promptText="Nombre" />
+      <TextField fx:id="textFieldCui" layoutX="207.0" layoutY="239.0" promptText="Número de Identificación" />
+      <TextField fx:id="textFieldApellido" layoutX="314.0" layoutY="151.0" promptText="apellido" />
+      <Text layoutX="71.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+      <Text layoutX="314.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido" />
+      <Text layoutX="207.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de Identificación" />
+      <Button fx:id="regresarPantalla" layoutX="92.0" layoutY="310.0" mnemonicParsing="false" onAction="#regresarPantalla" prefHeight="47.0" prefWidth="146.0" text="CANCELAR" />
+      <Button fx:id="guardarAutor" layoutX="335.0" layoutY="310.0" mnemonicParsing="false" onAction="#guardarAutor" prefHeight="47.0" prefWidth="146.0" text="GUARDAR" />
+   </children>
+</AnchorPane>

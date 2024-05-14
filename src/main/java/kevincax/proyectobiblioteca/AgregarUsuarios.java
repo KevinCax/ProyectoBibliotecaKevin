@@ -10,7 +10,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.net.URL;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -35,7 +34,7 @@ public class AgregarUsuarios implements Initializable, StageInterface {
     @FXML
     private TextField textFieldNombre, textFieldDireccion, textFieldTelefono, textFieldCui, textFieldCorreo;
     @FXML
-    private PasswordField textFieldContrasena;
+    private PasswordField textFieldContrasenia;
 
 
     public void guardarUser() {
@@ -44,9 +43,9 @@ public class AgregarUsuarios implements Initializable, StageInterface {
         String telefono = textFieldTelefono.getText();
         String cui = textFieldCui.getText();
         String correo_electronico = textFieldCorreo.getText();
-        String contrasena = textFieldContrasena.getText();
+        String contrasenia = textFieldContrasenia.getText();
 
-        String agregarUsuarios = "INSERT INTO users (nombre, direccion,telefono,cui,correo_electronico,contrasena) VALUES ('" + nombre + "','" + direccion + "','" + telefono + "', '" + cui + "', '" + correo_electronico + "', '" + contrasena + "')";
+        String agregarUsuarios = "INSERT INTO users (nombre, direccion,telefono,cui,correo_electronico,contrasenia) VALUES ('" + nombre + "','" + direccion + "','" + telefono + "', '" + cui + "', '" + correo_electronico + "', '" + contrasenia + "')";
 
             try {
                 Statement statement;
