@@ -58,7 +58,7 @@ public class AgregarAutores implements StageInterface {
 
     public void regresarPantalla() {
         HelloApplication LI = new HelloApplication();
-        LI.muestraVentana(stage, "Pantalla-registros.fxml");
+        LI.muestraVentana(stage, "Pantalla-admin.fxml");
     }
 
 

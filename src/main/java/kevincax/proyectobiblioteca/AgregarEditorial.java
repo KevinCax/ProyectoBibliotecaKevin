@@ -72,7 +72,7 @@ public class AgregarEditorial implements StageInterface {
 
     public void buttonCancelar() {
         HelloApplication LI = new HelloApplication();
-        LI.muestraVentana(stage, "Pantalla-registros.fxml");
+        LI.muestraVentana(stage, "Pantalla-admin.fxml");
     }
 
 

@@ -18,7 +18,7 @@ public class ConexionBaseDatos {
          return connection;
     }
 
-      private static void showAlert(String title, String content) {
+      public static void showAlert(String title, String content) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(title);
         alert.setHeaderText(null);

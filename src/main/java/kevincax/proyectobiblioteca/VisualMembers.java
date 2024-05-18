@@ -19,6 +19,6 @@ public class VisualMembers implements StageInterface {
 
     public void onSalir(ActionEvent actionEvent) {
         HelloApplication LI = new HelloApplication();
-        LI.muestraVentana(stage, "Pantalla-registros.fxml");
+        LI.muestraVentana(stage, "Pantalla-admin.fxml");
     }
 }

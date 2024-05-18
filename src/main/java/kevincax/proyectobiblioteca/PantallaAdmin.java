@@ -1,15 +1,10 @@
 package kevincax.proyectobiblioteca;
 
-import Controllers.BaseDeDatos.ConexionBaseDatos;
 import Controllers.Controladores.StageInterface;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-import java.sql.SQLException;
-import java.sql.Statement;
-
-public class PantallaRegistros implements StageInterface {
+public class PantallaAdmin implements StageInterface {
 
     Stage stage;
     @Override

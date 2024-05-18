@@ -100,7 +100,7 @@ public class AgregarLibros implements StageInterface,Initializable {
     @FXML
     private void cancelar() {
         HelloApplication LI = new HelloApplication();
-        LI.muestraVentana(stage, "Pantalla-registros.fxml");
+        LI.muestraVentana(stage, "Pantalla-admin.fxml");
 
     }
 
