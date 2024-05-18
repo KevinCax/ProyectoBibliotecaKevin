@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 
 public class VisualMembers implements StageInterface {
 
-    Stage stage;
+    private Stage stage;
     @Override
     public void setStage(Stage stage) {
         this.stage=stage;

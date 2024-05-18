@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="502.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kevincax.proyectobiblioteca.PantallaUsuario">
+   <children>
+      <VBox alignment="CENTER" prefHeight="83.0" prefWidth="739.0" style="-fx-background-color: #0598FF;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Qué quieres hacer hoy?">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <Button fx:id="prestarLibro" layoutX="75.0" layoutY="132.0" mnemonicParsing="false" onAction="#prestarLibro" prefHeight="110.0" prefWidth="254.0" style="-fx-background-color: #516CF3;" text="Prestar Libro" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="devolverLibro" layoutX="418.0" layoutY="132.0" mnemonicParsing="false" onAction="#devolverLibro" prefHeight="110.0" prefWidth="254.0" style="-fx-background-color: #516CF3;" text="Devolver Libro" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="buscarLibro" layoutX="243.0" layoutY="310.0" mnemonicParsing="false" onAction="#buscarLibro" prefHeight="110.0" prefWidth="254.0" style="-fx-background-color: #516CF3;" text="Buscar Libro" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

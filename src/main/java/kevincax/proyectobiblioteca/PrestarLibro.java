@@ -3,13 +3,13 @@ package kevincax.proyectobiblioteca;
 import Controllers.Controladores.StageInterface;
 import javafx.stage.Stage;
 
-public class PantallaUsuarios implements StageInterface {
+public class PrestarLibro implements StageInterface {
 
-    Stage stage;
-
+    private Stage stage;
     @Override
     public void setStage(Stage stage) {
         this.stage = stage;
+
     }
 
     @Override

@@ -24,7 +24,7 @@ public class LoginInicio implements StageInterface {
     @FXML
     private Label welcomeText;
 
-    Stage stage;
+    private Stage stage;
     @Override
     public void setStage(Stage stage) {
         this.stage=stage;
@@ -49,27 +49,23 @@ public class LoginInicio implements StageInterface {
         String email = textFieldEmail.getText();
         String password = textFieldPassword.getText();
 
-        String verifyLogin = "SELECT count(1) FROM users WHERE correo_electronico = '" + email + "'AND contrasenia = '" + password + "'";
+        String verifyLogin = "SELECT * FROM users WHERE correo_electronico = '" + email + "'AND contrasenia = '" + password + "'";
         ResultSet queryResult = null;
-
 
                 try {
                     Statement statement = ConexionBaseDatos.BaseDatos().createStatement();
                     queryResult = statement.executeQuery(verifyLogin);
 
                     if (queryResult.next()) {
-                        int userCount = queryResult.getInt(1);
-                        if (userCount == 1) {
-                            if (esAdmin(email)){
-                                HelloApplication LI = new HelloApplication();
+                        boolean isAdmin = queryResult.getBoolean("esadmin");
+                        HelloApplication LI = new HelloApplication();
+                            if (isAdmin){
                                 LI.muestraVentana(stage, "Pantalla-admin.fxml");
+                            } else {
+                                LI.muestraVentana(stage, "Pantalla-usuario.fxml");
                             }
-
                         } else {
-                            HelloApplication LI = new HelloApplication();
-                            LI.muestraVentana(stage, "Pantalla-usuarios.fxml");
-                        }
-
+                        showAlert("Alerta","Tu usuario no existe");
                     }
 
                 } catch (Exception e) {
@@ -79,6 +75,15 @@ public class LoginInicio implements StageInterface {
                         queryResult.close();
                     }
                 }
+    }
+
+    private static void showAlert(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+
     }
     private boolean esAdmin(String email) {
         String query = "SELECT admin FROM users WHERE correo_electronico = '" + email + "'";

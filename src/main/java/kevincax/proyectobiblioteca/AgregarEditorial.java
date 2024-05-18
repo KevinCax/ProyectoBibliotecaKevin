@@ -18,7 +18,7 @@ import static kevincax.proyectobiblioteca.HelloApplication.llenarCombo;
 
 public class AgregarEditorial implements StageInterface {
 
-    Stage stage;
+    private Stage stage;
     @Override
     public void setStage(Stage stage) {
         this.stage = stage;

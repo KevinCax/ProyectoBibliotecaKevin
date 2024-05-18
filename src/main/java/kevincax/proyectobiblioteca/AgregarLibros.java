@@ -20,7 +20,7 @@ public class AgregarLibros implements StageInterface,Initializable {
 
 
 
-    Stage stage;
+    private Stage stage;
 
     @Override
     public void setStage(Stage stage) {
