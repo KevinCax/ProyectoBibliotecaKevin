@@ -8,7 +8,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kevincax.proyectobiblioteca.AgregarAutores">
    <children>
       <VBox prefHeight="99.0" prefWidth="600.0" style="-fx-background-color: #0598FF;" AnchorPane.bottomAnchor="301.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -29,7 +28,7 @@
       <Text layoutX="71.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
       <Text layoutX="314.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido" />
       <Text layoutX="207.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de Identificación" />
-      <Button fx:id="regresarPantalla" layoutX="92.0" layoutY="310.0" mnemonicParsing="false" onAction="#regresarPantalla" prefHeight="47.0" prefWidth="146.0" text="CANCELAR" />
-      <Button fx:id="guardarAutor" layoutX="335.0" layoutY="310.0" mnemonicParsing="false" onAction="#guardarAutor" prefHeight="47.0" prefWidth="146.0" text="GUARDAR" />
+      <Button fx:id="regresarPantalla" layoutX="335.0" layoutY="325.0" mnemonicParsing="false" onAction="#regresarPantalla" prefHeight="47.0" prefWidth="146.0" text="CANCELAR" />
+      <Button fx:id="guardarAutor" layoutX="92.0" layoutY="325.0" mnemonicParsing="false" onAction="#guardarAutor" prefHeight="47.0" prefWidth="146.0" text="GUARDAR" />
    </children>
 </AnchorPane>

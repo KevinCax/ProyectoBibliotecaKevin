@@ -65,7 +65,15 @@
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER" layoutY="556.0" prefHeight="0.0" prefWidth="794.0" />
-                              <Button alignment="CENTER" layoutX="311.0" layoutY="480.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="175.0" text="Asunto" />
+                              <Button alignment="CENTER" layoutX="168.0" layoutY="481.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="175.0" style="-fx-background-color: #0598FF;" text="Asunto" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold Italic" size="24.0" />
+                                 </font></Button>
+                              <Button fx:id="regresarInicio" alignment="CENTER" layoutX="466.0" layoutY="481.0" mnemonicParsing="false" onAction="#regresarInicio" prefHeight="51.0" prefWidth="175.0" style="-fx-background-color: #0598FF;" text="Salir" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold Italic" size="24.0" />
+                                 </font>
+                              </Button>
                            </children>
                         </AnchorPane>
                   </content>

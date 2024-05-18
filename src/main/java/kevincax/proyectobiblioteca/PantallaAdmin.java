@@ -39,4 +39,9 @@ public class PantallaAdmin implements StageInterface {
         HelloApplication LI = new HelloApplication();
         LI.muestraVentana(stage, "Agregar-editorial.fxml");
     }
+
+    public void regresarInicio() {
+        HelloApplication LI = new HelloApplication();
+        LI.muestraVentana(stage, "Pantalla-inicial.fxml");
+    }
 }
