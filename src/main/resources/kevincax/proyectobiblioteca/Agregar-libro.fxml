@@ -24,40 +24,12 @@
             </Text>
          </children>
       </VBox>
-      <VBox alignment="CENTER" layoutY="80.0" prefHeight="414.0" prefWidth="819.0">
-         <children>
-            <TextField fx:id="textFieldTitulo" prefHeight="31.0" prefWidth="696.0" promptText="Título del Libro">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="100.0" right="100.0" top="20.0" />
-               </VBox.margin>
-            </TextField>
-            <TextField fx:id="textFieldIsbn" layoutX="10.0" layoutY="10.0" promptText="ISBN">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="100.0" right="100.0" top="20.0" />
-               </VBox.margin>
-            </TextField>
-            <TextField fx:id="textFieldAutor" layoutX="10.0" layoutY="10.0" promptText="Autor del Libro">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="100.0" right="100.0" top="20.0" />
-               </VBox.margin>
-            </TextField>
-            <TextField fx:id="textFieldPublisher" layoutX="10.0" layoutY="41.0" promptText="Año de Publicación">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="100.0" right="100.0" top="20.0" />
-               </VBox.margin>
-            </TextField>
-            <TextField fx:id="textFieldEditorial" layoutX="10.0" layoutY="41.0" promptText="Editorial del Libro">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="100.0" right="100.0" top="20.0" />
-               </VBox.margin>
-            </TextField>
-            <TextField fx:id="textFieldCantDis" layoutX="10.0" layoutY="41.0" promptText="Cantidad Disponible">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="100.0" right="100.0" top="20.0" />
-               </VBox.margin>
-            </TextField>
-         </children>
-      </VBox>
+      <TextField fx:id="textFieldTitulo" layoutX="200.0" layoutY="123.0" prefHeight="31.0" prefWidth="420.0" promptText="Título del Libro" />
+      <TextField fx:id="textFieldIsbn" layoutX="200.0" layoutY="182.0" prefHeight="31.0" prefWidth="420.0" promptText="ISBN" />
+      <TextField fx:id="textFieldAutor" layoutX="200.0" layoutY="433.0" prefHeight="31.0" prefWidth="420.0" promptText="Autor del Libro" />
+      <TextField fx:id="textFieldPublisher" layoutX="200.0" layoutY="241.0" prefHeight="31.0" prefWidth="420.0" promptText="Año de Publicación" />
+      <TextField fx:id="textFieldEditorial" layoutX="200.0" layoutY="369.0" prefHeight="31.0" prefWidth="420.0" promptText="Editorial del Libro" />
+      <TextField fx:id="textFieldCantDis" layoutX="200.0" layoutY="303.0" prefHeight="31.0" prefWidth="420.0" promptText="Cantidad Disponible" />
       <HBox alignment="CENTER" layoutY="494.0" prefHeight="121.0" prefWidth="819.0">
          <children>
             <Button fx:id="saveButton" mnemonicParsing="false" onAction="#guardarLibro" prefHeight="55.0" prefWidth="230.0" style="-fx-background-color: #0598FF;" text="Guardar" textFill="WHITE">
@@ -79,5 +51,11 @@
 
          </children>
       </HBox>
+      <Text layoutX="200.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Título del libro" />
+      <Text layoutX="200.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" />
+      <Text layoutX="200.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Año de publicación" />
+      <Text layoutX="200.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad disponible" />
+      <Text layoutX="200.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de la editorial" />
+      <Text layoutX="200.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del autor" />
    </children>
 </Pane>

@@ -7,7 +7,7 @@ import java.sql.*;
 public class ConexionBaseDatos {
 
 
-     public static Connection BaseDatos () {
+    public static Connection BaseDatos () {
       Connection connection = null;
         try{
             connection = DriverManager.getConnection("jdbc:postgresql://roundhouse.proxy.rlwy.net:18270/railway","postgres","bjlnClYuLvdPiDvAOntVRdQHzoPKcxFv");
@@ -47,5 +47,7 @@ public class ConexionBaseDatos {
             throw new RuntimeException("Error al ejecutar la consulta de inserción: " + e.getMessage(), e);
         }
     }
+
+
 
 }

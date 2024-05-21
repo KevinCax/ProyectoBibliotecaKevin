@@ -9,7 +9,7 @@ public class PantallaAdmin implements StageInterface {
     private Stage stage;
     @Override
     public void setStage(Stage stage) {
-    this.stage = stage;
+        this.stage = stage;
     }
 
     @Override
@@ -19,23 +19,23 @@ public class PantallaAdmin implements StageInterface {
 
 
 
-    public void onButtonAddBook(ActionEvent actionEvent) {
+    public void onButtonAddBook() {
         HelloApplication LI = new HelloApplication();
         LI.muestraVentana(stage, "Agregar-libro.fxml");
     }
 
-    public void onVisuMembers(ActionEvent actionEvent) {
+    public void onVisuMembers() {
         HelloApplication LI = new HelloApplication();
         LI.muestraVentana(stage, "Visual-members.fxml");
     }
 
-    public void abrirAutores(ActionEvent actionEvent) {
+    public void abrirAutores() {
         HelloApplication LI = new HelloApplication();
         LI.muestraVentana(stage, "Agregar-autores.fxml");
     }
 
 
-    public void agregarEditorial(ActionEvent actionEvent) {
+    public void agregarEditorial() {
         HelloApplication LI = new HelloApplication();
         LI.muestraVentana(stage, "Agregar-editorial.fxml");
     }

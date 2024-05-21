@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="kevincax.proyectobiblioteca.PrestarLibro"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="492.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kevincax.proyectobiblioteca.PrestarLibro">
+   <children>
+      <VBox alignment="CENTER" prefHeight="69.0" prefWidth="683.0" style="-fx-background-color: #0598FF;">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Qué libro deseas prestar?">
+               <font>
+                  <Font name="Arial Bold Italic" size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <TextField fx:id="ingresarCui" layoutX="40.0" layoutY="132.0" prefHeight="34.0" prefWidth="205.0" />
+      <Text layoutX="40.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese su número de CUI" />
+      <ComboBox fx:id="escogerLibros" layoutX="342.0" layoutY="132.0" prefHeight="31.0" prefWidth="211.0" promptText="Libros" />
+      <Text layoutX="342.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escoga el libro deseado" />
+      <Button layoutX="126.0" layoutY="385.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="172.0" text="GUARDAR" />
+      <Button layoutX="362.0" layoutY="385.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="172.0" text="CANCELAR" />
+   </children>
 </AnchorPane>

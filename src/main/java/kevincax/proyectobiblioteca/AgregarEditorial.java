@@ -29,7 +29,6 @@ public class AgregarEditorial implements StageInterface {
     ObservableList<String> ciudadesList = FXCollections.observableArrayList("Estados Unidos","Guatemala","España", "Francia", "México", "Portugal", "Panamá", "Reino Unido", "Alemania", "Irlanda", "Argentina", "Israel", "Australia", "Italia" ,"Bangladesh");
 
     public void listarCiudades(Event event) {
-
         llenarCombo(cbCiudades, ciudadesList);
 
     }
