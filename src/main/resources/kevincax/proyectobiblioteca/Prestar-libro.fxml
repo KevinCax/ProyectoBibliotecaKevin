@@ -7,7 +7,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane prefHeight="492.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kevincax.proyectobiblioteca.PrestarLibro">
    <children>
       <VBox alignment="CENTER" prefHeight="69.0" prefWidth="683.0" style="-fx-background-color: #0598FF;">
@@ -19,11 +18,17 @@
             </Text>
          </children>
       </VBox>
-      <TextField fx:id="ingresarCui" layoutX="40.0" layoutY="132.0" prefHeight="34.0" prefWidth="205.0" />
-      <Text layoutX="40.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese su número de CUI" />
-      <ComboBox fx:id="escogerLibros" layoutX="342.0" layoutY="132.0" prefHeight="31.0" prefWidth="211.0" promptText="Libros" />
-      <Text layoutX="342.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escoga el libro deseado" />
-      <Button layoutX="126.0" layoutY="385.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="172.0" text="GUARDAR" />
-      <Button layoutX="362.0" layoutY="385.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="172.0" text="CANCELAR" />
+      <TextField fx:id="ingresarCui" layoutX="93.0" layoutY="126.0" prefHeight="34.0" prefWidth="205.0" />
+      <Text layoutX="93.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese su número de CUI" />
+      <Text layoutX="362.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escoga el libro deseado" />
+      <Button fx:id="prestarLibro" layoutX="126.0" layoutY="385.0" mnemonicParsing="false" onAction="#prestarLibro" prefHeight="61.0" prefWidth="172.0" text="GUARDAR" />
+      <Button fx:id="cancelarPrestamo" layoutX="362.0" layoutY="385.0" mnemonicParsing="false" onAction="#cancelarPrestamo" prefHeight="61.0" prefWidth="172.0" text="CANCELAR" />
+      <ComboBox fx:id="escogerLibro" layoutX="362.0" layoutY="128.0" prefHeight="31.0" prefWidth="172.0" promptText="Libros" />
+      <Text layoutX="93.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de préstamo" />
+      <DatePicker fx:id="fechaPrestamo" layoutX="93.0" layoutY="224.0" prefHeight="31.0" prefWidth="205.0" />
+      <DatePicker fx:id="fechaDevolucion" layoutX="362.0" layoutY="227.0" prefHeight="31.0" prefWidth="205.0" />
+      <Text layoutX="362.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de devolución" />
+      <ComboBox fx:id="cantidadPrestada" layoutX="267.0" layoutY="312.0" prefHeight="31.0" prefWidth="121.0" />
+      <Text layoutX="267.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad de libros" />
    </children>
 </AnchorPane>

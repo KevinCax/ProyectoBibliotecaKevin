@@ -49,5 +49,16 @@ public class ConexionBaseDatos {
     }
 
 
+    public static boolean checkBookExists(String titulo) throws Exception {
+        String query = "SELECT COUNT(*) FROM libro WHERE name = '" + titulo + "'";
+        try (Connection connection = ConexionBaseDatos.BaseDatos();
+             Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(query)) {
+            if (resultSet.next()) {
+                return resultSet.getInt(1) > 0;
+            }
+        }
+        return false;
+    }
 
 }
