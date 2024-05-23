@@ -35,19 +35,22 @@ public class PrestarLibro  implements StageInterface {
     public void initialize()  {
         ConexionBaseDatos objetoConexion = new ConexionBaseDatos();
         PrestarLibro();
+        cantidadListL();
     }
-    ObservableList<String> cantidadListL = FXCollections.observableArrayList("1","2","3","4","5","6","7","8","9","10");
 
-    public void listarCantidades(){
+    private void cantidadListL() {
         llenarCombo(cantidadPrestada, cantidadListL);
     }
+
+    ObservableList<String> cantidadListL = FXCollections.observableArrayList("1","2","3","4","5","6","7","8","9","10");
+
 
     @FXML
     private TextField ingresarCui;
     @FXML
     private ComboBox cantidadPrestada;
     @FXML
-    private DatePicker fechaPrestamo, fechaDevolucion;
+    private TextField fechaPrestamo, fechaDevolucion;
 
 
 
@@ -55,8 +58,8 @@ public class PrestarLibro  implements StageInterface {
         String cui = ingresarCui.getText();
         Libro isbn = escogerLibro.getValue();
         int cant_libros_prestados = Integer.parseInt(cantidadListL.getFirst());
-        LocalDate fecha_prestamo = fechaPrestamo.getValue();
-        LocalDate fecha_devolucion = fechaDevolucion.getValue();
+        String fecha_prestamo = fechaPrestamo.getText();
+        String fecha_devolucion = fechaDevolucion.getText();
 
         String prestarLibros = "INSERT INTO prestamo (cui, isbn, fecha_prestamo, fecha_devolucion,  cant_libros_prestados ) VALUES ('" + cui + "','" + isbn + "','" + fecha_prestamo + "', '" + fecha_devolucion + "', '" + cant_libros_prestados + "')";
 
@@ -64,15 +67,17 @@ public class PrestarLibro  implements StageInterface {
             Statement statement;
             statement = ConexionBaseDatos.BaseDatos().createStatement();
             statement.executeUpdate(prestarLibros);
-            showAlert("Mensaje", "¡Autor agregado");
+            showAlert("Mensaje", "¡Prestamo Realizado!");
         } catch (SQLException e) {
-            showAlert("Mensaje","No se agregaron los datos");
+            showAlert("Alerta","No se agregaron los datos");
         }
     }
 
 
 
     public void cancelarPrestamo() {
+        HelloApplication LI = new HelloApplication();
+        LI.muestraVentana(stage, "Pantalla-usuario.fxml");
     }
 
     @FXML
