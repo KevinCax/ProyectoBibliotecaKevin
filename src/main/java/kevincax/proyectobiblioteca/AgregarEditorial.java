@@ -19,46 +19,53 @@ import static kevincax.proyectobiblioteca.HelloApplication.llenarCombo;
 public class AgregarEditorial implements StageInterface {
 
     private Stage stage;
+
     @Override
     public void setStage(Stage stage) {
         this.stage = stage;
     }
+
     @FXML
-    private ComboBox cbCiudades;
+    private ComboBox<String> cbCiudades;  // Especifica el tipo String
 
-    ObservableList<String> ciudadesList = FXCollections.observableArrayList("Estados Unidos","Guatemala","España", "Francia", "México", "Portugal", "Panamá", "Reino Unido", "Alemania", "Irlanda", "Argentina", "Israel", "Australia", "Italia" ,"Bangladesh");
-
-    public void listarCiudades(Event event) {
-        llenarCombo(cbCiudades, ciudadesList);
-
-    }
+    ObservableList<String> ciudadesList = FXCollections.observableArrayList(
+            " ","Guatemala", "España", "Francia", "México", "Portugal", "Panamá",
+            "Reino Unido", "Alemania", "Irlanda", "Argentina", "Israel",
+            "Australia", "Italia", "Bangladesh", "Estados Unidos", "Canadá",
+            "Brasil", "Chile", "Colombia", "Perú");
 
     @Override
     public void initialize() {
         ConexionBaseDatos objetoConexion = new ConexionBaseDatos();
+        cbCiudades.setItems(ciudadesList);  // Llena el ComboBox con la lista de ciudades
     }
 
     @FXML
     private TextField textNombreEditorial, textFieldDireccion;
 
-
     public void guardarEditoriales() {
         String nombre_editorial = textNombreEditorial.getText();
         String ubicacion = textFieldDireccion.getText();
-        String ciudad_ubicacion = ciudadesList.getFirst();
+        String ciudad_ubicacion = cbCiudades.getValue();  // Obtener la ciudad seleccionada
 
-        String agregarEditorial = "INSERT INTO editorial (nombre_editorial, ubicacion, ciudad_ubicacion ) VALUES ('" + nombre_editorial + "','" + ubicacion + "','" + ciudad_ubicacion + "')";
-
-
-        try {
-            Statement statement;
-            statement = ConexionBaseDatos.BaseDatos().createStatement();
-            statement.executeUpdate(agregarEditorial);
-            showAlert("Mensaje", "¡Editorial Agregado Correctamente");
-        } catch (SQLException e) {
-            showAlert("Mensaje","Error al Conectar");
+        if (ciudad_ubicacion == null || ciudad_ubicacion.isEmpty()) {
+            showAlert("Error", "Por favor, seleccione una ciudad.");
+            return;
         }
 
+        String agregarEditorial = "INSERT INTO editorial (nombre_editorial, ubicacion, ciudad_ubicacion) VALUES ('"
+                + nombre_editorial.replace("'", "''") + "','"
+                + ubicacion.replace("'", "''") + "','"
+                + ciudad_ubicacion.replace("'", "''") + "')";
+
+        try {
+            Statement statement = ConexionBaseDatos.BaseDatos().createStatement();
+            statement.executeUpdate(agregarEditorial);
+            showAlert("Mensaje", "¡Editorial Agregado Correctamente!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            showAlert("Mensaje", "Error al Conectar");
+        }
     }
 
     private void showAlert(String Titulo, String Mensaje) {
@@ -74,8 +81,7 @@ public class AgregarEditorial implements StageInterface {
         LI.muestraVentana(stage, "Pantalla-admin.fxml");
     }
 
-
-
-
-
+    public void listarCiudades(Event event) {
+        llenarCombo(cbCiudades, ciudadesList);
+    }
 }

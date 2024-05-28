@@ -10,7 +10,7 @@ public class ConexionBaseDatos {
     public static Connection BaseDatos () {
       Connection connection = null;
         try{
-            connection = DriverManager.getConnection("jdbc:postgresql://roundhouse.proxy.rlwy.net:18270/railway","postgres","bjlnClYuLvdPiDvAOntVRdQHzoPKcxFv");
+            connection = DriverManager.getConnection("jdbc:postgresql://monorail.proxy.rlwy.net:16669/railway","postgres","jNzFQGTXqehFSxRpylIyCwycEtCsrHZD");
 
           } catch (SQLException e) {
           showAlert("Alerta", "No se conecto a la base de datos, error:"+e.toString());

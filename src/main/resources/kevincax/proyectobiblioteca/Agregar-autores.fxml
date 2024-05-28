@@ -22,12 +22,10 @@
             </Text>
          </children>
       </VBox>
-      <TextField fx:id="textFieldNombre" layoutX="71.0" layoutY="151.0" promptText="Nombre" />
-      <TextField fx:id="textFieldCui" layoutX="207.0" layoutY="239.0" promptText="Número de Identificación" />
-      <TextField fx:id="textFieldApellido" layoutX="314.0" layoutY="151.0" promptText="apellido" />
-      <Text layoutX="71.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
-      <Text layoutX="314.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido" />
-      <Text layoutX="207.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de Identificación" />
+      <TextField fx:id="textFieldNombreApellido" layoutX="71.0" layoutY="151.0" promptText="Nombre" />
+      <TextField fx:id="textFieldCui" layoutX="335.0" layoutY="148.0" promptText="Número de Identificación" />
+      <Text layoutX="71.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Y Apellido" />
+      <Text layoutX="335.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de Identificación" />
       <Button fx:id="regresarPantalla" layoutX="335.0" layoutY="325.0" mnemonicParsing="false" onAction="#regresarPantalla" prefHeight="47.0" prefWidth="146.0" text="CANCELAR" />
       <Button fx:id="guardarAutor" layoutX="92.0" layoutY="325.0" mnemonicParsing="false" onAction="#guardarAutor" prefHeight="47.0" prefWidth="146.0" text="GUARDAR" />
    </children>

@@ -27,7 +27,7 @@
       <TextField fx:id="textFieldTitulo" layoutX="200.0" layoutY="123.0" prefHeight="31.0" prefWidth="420.0" promptText="Título del Libro" />
       <TextField fx:id="textFieldIsbn" layoutX="200.0" layoutY="182.0" prefHeight="31.0" prefWidth="420.0" promptText="ISBN" />
       <TextField fx:id="textFieldAutor" layoutX="200.0" layoutY="433.0" prefHeight="31.0" prefWidth="420.0" promptText="Autor del Libro" />
-      <TextField fx:id="textFieldPublisher" layoutX="200.0" layoutY="241.0" prefHeight="31.0" prefWidth="420.0" promptText="Año de Publicación" />
+      <TextField fx:id="textFieldPublisher" layoutX="200.0" layoutY="241.0" prefHeight="31.0" prefWidth="420.0" promptText="AAAA/MM/DD" />
       <TextField fx:id="textFieldEditorial" layoutX="200.0" layoutY="369.0" prefHeight="31.0" prefWidth="420.0" promptText="Editorial del Libro" />
       <TextField fx:id="textFieldCantDis" layoutX="200.0" layoutY="303.0" prefHeight="31.0" prefWidth="420.0" promptText="Cantidad Disponible" />
       <HBox alignment="CENTER" layoutY="494.0" prefHeight="121.0" prefWidth="819.0">

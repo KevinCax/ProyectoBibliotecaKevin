@@ -1,31 +1,23 @@
 package kevincax.proyectobiblioteca;
 
 public class Autor {
-    private String nombre;
-    private String apellido;
+    private String nombreYApellido;
+
     private String cui;
 
     public Autor(String nombre, String apellido, String cui) {
-        this.nombre = nombre;
-        this.apellido = apellido;
+        this.nombreYApellido = nombre;
         this.cui = cui;
     }
 
     public String getNombre() {
-        return nombre;
+        return nombreYApellido;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.nombreYApellido = nombre;
     }
 
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
 
     public String getCui() {
         return cui;
@@ -38,8 +30,7 @@ public class Autor {
     @Override
     public String toString() {
         return "Autor{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
+                "nombreYApellido='" + nombreYApellido + '\'' +
                 ", cui='" + cui + '\'' +
                 '}';
     }

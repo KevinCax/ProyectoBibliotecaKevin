@@ -26,13 +26,12 @@ public class AgregarAutores implements StageInterface {
     }
 
     @FXML
-    private TextField textFieldNombre, textFieldApellido, textFieldCui;
-    public void guardarAutor(ActionEvent actionEvent) {
-        String nombre = textFieldNombre.getText();
-        String apellido = textFieldApellido.getText();
+    private TextField textFieldNombreApellido,  textFieldCui;
+    public void guardarAutor() {
+        String nombreYApellido = textFieldNombreApellido.getText();
         String cui = textFieldCui.getText();
 
-        String agregarAutor = "INSERT INTO autor (nombre, apellido, cui ) VALUES ('" + nombre + "','" + apellido + "','" + cui + "')";
+        String agregarAutor = "INSERT INTO autor (nombreYApellido, cui ) VALUES ('" + nombreYApellido + "','" + cui + "')";
 
 
         try {
