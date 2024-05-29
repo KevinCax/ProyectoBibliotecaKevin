@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.util.StringConverter;
 
 import java.sql.Date;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.ParseException;
@@ -24,6 +25,7 @@ import static kevincax.proyectobiblioteca.HelloApplication.llenarCombo;
 
 
 public class PrestarLibro  implements StageInterface {
+
 
     private Stage stage;
 
@@ -69,6 +71,10 @@ public class PrestarLibro  implements StageInterface {
             return;
         }
 
+        if (!hayLibrosDisponibles(libro.getIsbn(), Integer.parseInt(cant_libros_prestados))) {
+            showAlert("Alerta", "No hay suficientes libros disponibles para el préstamo.");
+            return;
+        }
 
         String prestarLibros = "INSERT INTO prestamo (cui, isbn, fecha_prestamo, fecha_devolucion, cant_libros_prestados) VALUES ('"
                 + cui + "','" + libro.getIsbn() + "','" + fecha_prestamo + "', '" + fecha_devolucion + "', '" + cant_libros_prestados + "')";
@@ -76,14 +82,29 @@ public class PrestarLibro  implements StageInterface {
         try {
             Statement statement = ConexionBaseDatos.BaseDatos().createStatement();
             statement.executeUpdate(prestarLibros);
-            actualizarDisponibilidadLibro(libro.getIsbn(), cant_libros_prestados);
+            actualizarDisponibilidadLibro(libro.getIsbn(), Integer.parseInt(cant_libros_prestados));
             showAlert("Mensaje", "¡Préstamo Realizado!");
         } catch (SQLException e) {
             showAlert("Alerta", "No se agregaron los datos");
         }
     }
 
-    private void actualizarDisponibilidadLibro(String isbn, String cantidadPrestada) {
+    private boolean hayLibrosDisponibles(String isbn, int cantidadRequerida) {
+        String consultaDisponibilidad = "SELECT cantidad_disponible FROM libro WHERE isbn = '" + isbn + "'";
+        try {
+            Statement statement = ConexionBaseDatos.BaseDatos().createStatement();
+            ResultSet resultSet = statement.executeQuery(consultaDisponibilidad);
+            if (resultSet.next()) {
+                int cantidadDisponible = resultSet.getInt("cantidad_disponible");
+                return cantidadDisponible >= cantidadRequerida;
+            }
+        } catch (SQLException e) {
+            showAlert("Alerta", "Error al verificar la disponibilidad del libro.");
+        }
+        return false;
+    }
+
+    private void actualizarDisponibilidadLibro(String isbn, int cantidadPrestada) {
         String actualizarLibro = "UPDATE libro SET cantidad_disponible = cantidad_disponible - " + cantidadPrestada + " WHERE isbn = '" + isbn + "'";
         try {
             Statement statement = ConexionBaseDatos.BaseDatos().createStatement();
@@ -123,8 +144,6 @@ public class PrestarLibro  implements StageInterface {
             e.printStackTrace();
         }
     }
-
-
 
     private void showAlert(String Titulo, String Mensaje) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
