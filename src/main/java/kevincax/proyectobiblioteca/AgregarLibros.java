@@ -77,7 +77,7 @@ public class AgregarLibros implements StageInterface,Initializable {
             showAlert("Error", "Error al consultar la base de datos.");
             return;
         }
-
+            // .replace es una práctica de sanitización de entradas y ayuda a proteger la integridad de la base de datos frente a ataques comunes de inyección SQL.
         String agregarLibro = "INSERT INTO libro (titulo, isbn, anio_publicacion, cantidad_disponible, idEditorial, idAutor) VALUES ('" +
                 titulo.replace("'", "''") + "','" +
                 isbn.replace("'", "''") + "','" +

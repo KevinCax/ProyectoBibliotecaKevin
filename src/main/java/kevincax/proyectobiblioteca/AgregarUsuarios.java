@@ -21,52 +21,54 @@ public class AgregarUsuarios implements Initializable, StageInterface {
 
 
     private Stage stage;
+
     @Override
     public void setStage(Stage stage) {
-        this.stage=stage;
+        this.stage = stage;
     }
 
     @Override
     public void initialize() {
         ConexionBaseDatos objetoConexion = new ConexionBaseDatos();
-
     }
-
 
     @FXML
     private TextField textFieldNombre, textFieldDireccion, textFieldTelefono, textFieldCui, textFieldCorreo;
     @FXML
     private PasswordField textFieldContrasenia;
 
-
     public void guardarUser() {
-        String nombre = textFieldNombre.getText();
-        String direccion = textFieldDireccion.getText();
-        String telefono = textFieldTelefono.getText();
-        String cui = textFieldCui.getText();
-        String correo_electronico = textFieldCorreo.getText();
-        String contrasenia = textFieldContrasenia.getText();
+        String nombre = textFieldNombre.getText().replace("'", "''");
+        String direccion = textFieldDireccion.getText().replace("'", "''");
+        String telefono = textFieldTelefono.getText().replace("'", "''");
+        String cui = textFieldCui.getText().replace("'", "''");
+        String correo_electronico = textFieldCorreo.getText().replace("'", "''");
+        String contrasenia = textFieldContrasenia.getText().replace("'", "''");
 
-        String agregarUsuarios = "INSERT INTO users (nombre, direccion,telefono,cui,correo_electronico,contrasenia) VALUES ('" + nombre + "','" + direccion + "','" + telefono + "', '" + cui + "', '" + correo_electronico + "', '" + contrasenia + "')";
+        String agregarUsuarios = "INSERT INTO users (nombre, direccion, telefono, cui, correo_electronico, contrasenia) VALUES ('"
+                + nombre + "','"
+                + direccion + "','"
+                + telefono + "', '"
+                + cui + "', '"
+                + correo_electronico + "', '"
+                + contrasenia + "')";
 
-            try {
-                Statement statement;
-                statement = ConexionBaseDatos.BaseDatos().createStatement();
-                statement.executeUpdate(agregarUsuarios);
-                showAlert("Mensaje", "¡Registro exitoso! Bienvenido :)");
-            } catch (SQLException e) {
-                showAlert("Mensaje","No se agregaron los datos");
-            }
-
-
+        try {
+            Statement statement;
+            statement = ConexionBaseDatos.BaseDatos().createStatement();
+            statement.executeUpdate(agregarUsuarios);
+            showAlert("Mensaje", "¡Registro exitoso! Bienvenido :)");
+        } catch (SQLException e) {
+            showAlert("Mensaje", "No se agregaron los datos");
+        }
     }
+
     private static void showAlert(String title, String content) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(content);
         alert.showAndWait();
-
     }
 
     public void cancelUser(ActionEvent actionEvent) {
