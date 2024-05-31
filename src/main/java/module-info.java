@@ -10,6 +10,4 @@ module kevincax.proyectobiblioteca {
 
     opens kevincax.proyectobiblioteca to javafx.fxml;
     exports kevincax.proyectobiblioteca;
-    exports kevincax.proyectobiblioteca.Controllers.BaseDeDatos;
-    exports kevincax.proyectobiblioteca.Controllers.Controladores;
 }
