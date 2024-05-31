@@ -19,7 +19,7 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 600, 500);
         stage.setTitle("Biblioteca Kevin");
         stage.setScene(scene);
-        muestraVentana(stage, "Pantalla-inicial.fxml");
+        muestraVentana(stage,"Pantalla-Inicial.fxml");
     }
 
     public static void main(String[] args) {
