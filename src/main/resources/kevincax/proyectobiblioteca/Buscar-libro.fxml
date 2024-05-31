@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="kevincax.proyectobiblioteca.BuscarLibro"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kevincax.proyectobiblioteca.BuscarLibro">
+   <children>
+      <TextField layoutX="63.0" layoutY="79.0" prefHeight="35.0" prefWidth="203.0" />
+      <TextField layoutX="330.0" layoutY="79.0" prefHeight="35.0" prefWidth="203.0" />
+      <Button fx:id="buscarLibro" layoutX="85.0" layoutY="267.0" mnemonicParsing="false" onAction="#buscarLibro" prefHeight="61.0" prefWidth="158.0" text="Buscar" />
+      <Button fx:id="regresar" layoutX="330.0" layoutY="267.0" mnemonicParsing="false" onAction="#regresar" prefHeight="61.0" prefWidth="158.0" text="Regresar" />
+      <Text layoutX="63.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del libro" />
+      <Text layoutX="330.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" />
+   </children>
 </AnchorPane>

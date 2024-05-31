@@ -1,6 +1,8 @@
 package kevincax.proyectobiblioteca;
 
+import Controllers.BaseDeDatos.ConexionBaseDatos;
 import Controllers.Controladores.StageInterface;
+import javafx.event.ActionEvent;
 import javafx.stage.Stage;
 
 public class BuscarLibro implements StageInterface {
@@ -13,6 +15,14 @@ public class BuscarLibro implements StageInterface {
 
     @Override
     public void initialize() {
+        ConexionBaseDatos objetoConexion = new ConexionBaseDatos();
+    }
 
+    public void buscarLibro() {
+    }
+
+    public void regresar() {
+        HelloApplication LI = new HelloApplication();
+        LI.muestraVentana(stage, "Pantalla-usuario.fxml");
     }
 }

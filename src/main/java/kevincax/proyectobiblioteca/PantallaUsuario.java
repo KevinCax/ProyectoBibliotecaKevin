@@ -21,14 +21,13 @@ public class PantallaUsuario implements StageInterface {
         HelloApplication LI = new HelloApplication();
         LI.muestraVentana(stage, "Prestar-libro.fxml");
     }
-
     public void devolverLibro() {
         HelloApplication LI = new HelloApplication();
         LI.muestraVentana(stage, "Devolver-libro.fxml");
     }
     public void buscarLibro() {
         HelloApplication LI = new HelloApplication();
-        LI.muestraVentana(stage, "Pantalla-usuario.fxml");
+        LI.muestraVentana(stage, "Buscar-libro.fxml");
     }
 
 }
